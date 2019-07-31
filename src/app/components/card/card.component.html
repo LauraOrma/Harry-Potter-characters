@@ -1,0 +1,11 @@
+<div class="card mt-4" style="width: 18rem;">
+    <img class="card-img-top" [src]="character.image" alt="Card image cap">
+    <div class="card-body">
+      <h4 class="text-center">{{ character.name }}</h4>
+      <button
+      *ngIf = "character.house !== 'Slytherin' && character.house !== 'Ravenclaw'"
+      class="btn" 
+      [ngClass]="{'btn-danger' : character.house === 'Gryffindor', 'btn-primary': character.house !== 'Gryffindor'}"></button>
+      
+    </div>
+</div>
